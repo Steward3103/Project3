@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="com.example.peiandsky.Person" x="1216" y="768">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.example.peiandsky.Person"
+            endpointName="next" kind="Simple"/>
+        <Association destinationClassName="com.example.peiandsky.Person"
+            endpointName="last" kind="Simple"/>
+        <Association destinationClassName="com.example.peiandsky.Desk"
+            endpointName="desk" kind="Simple"/>
+        <Association destinationClassName="com.example.peiandsky.DDZ"
+            endpointName="ddz" kind="Simple"/>
+        <Association destinationClassName="com.example.peiandsky.Card"
+            endpointName="card" kind="Simple"/>
+        <Communication destinationClassName="com.example.peiandsky.Poke"/>
+    </Class>
+    <Class name="com.example.peiandsky.AnalyzePoke" x="269" y="419">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.example.peiandsky.Poke"/>
+    </Class>
+    <Class name="com.example.peiandsky.GameView" x="520" y="480">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.example.peiandsky.Desk"
+            endpointName="desk" kind="Simple"/>
+        <Association destinationClassName="com.example.peiandsky.DDZ"
+            endpointName="ddz" kind="Simple"/>
+        <Communication destinationClassName="com.example.peiandsky.Desk"/>
+    </Class>
+    <Class name="com.example.peiandsky.MenuView" x="1227" y="420">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.example.peiandsky.DDZ"
+            endpointName="ddz" kind="Simple"/>
+        <Communication destinationClassName="com.example.peiandsky.Poke"/>
+    </Class>
+    <Class name="com.example.peiandsky.Poke" x="550" y="407">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.example.peiandsky.AnalyzePoke"/>
+        <Communication destinationClassName="com.example.peiandsky.UniqInt"/>
+    </Class>
+    <Class name="com.example.peiandsky.Card" x="921" y="450">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.example.peiandsky.Poke"/>
+    </Class>
+    <Class name="com.example.peiandsky.PokeType" x="273" y="768">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.example.peiandsky.DDZ" x="948" y="659">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.example.peiandsky.MenuView"
+            endpointName="mv" kind="Simple"/>
+        <Association
+            destinationClassName="com.example.peiandsky.GameView"
+            endpointName="gv" kind="Simple"/>
+    </Class>
+    <Class name="com.example.peiandsky.UniqInt" x="401" y="766">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.example.peiandsky.Poke"/>
+    </Class>
+    <Class name="com.example.peiandsky.Desk" x="576" y="721">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.example.peiandsky.Person"
+            endpointName="persons" kind="Simple"/>
+        <Association destinationClassName="com.example.peiandsky.Card"
+            endpointName="currentCard" kind="Simple"/>
+        <Association destinationClassName="com.example.peiandsky.DDZ"
+            endpointName="ddz" kind="Simple"/>
+        <Communication destinationClassName="com.example.peiandsky.Person"/>
+        <Communication destinationClassName="com.example.peiandsky.AnalyzePoke"/>
+        <Communication destinationClassName="com.example.peiandsky.Poke"/>
+        <Communication destinationClassName="com.example.peiandsky.Card"/>
+    </Class>
+</ClassDiagram>
